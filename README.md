@@ -2,40 +2,66 @@
 
 ESP32 Morse Code trainer
 Documentation
+
+
 Summary
+
 This circuit is a Morse Code Trainer based on the ESP32 microcontroller. It includes an OLED
 display for visual feedback, multiple pushbuttons for user input, a potentiometer for adjusting
 settings, a buzzer for audio feedback, and an LED for visual signaling. The circuit is designed to
 help users learn, send, and decode Morse code through a combination of hardware and
 software interfaces, including a web interface for additional control and feedback.
 Component List
+
 1. ESP32 (38-pin Type-C CP2102)
+   
 ○ Description: A powerful microcontroller with WiFi and Bluetooth capabilities, used
 as the main processing unit.
+
 ○ Pins: 5V, CMD, SD3, SD2, G13, GND, G12, G14, G27, G26, G25, G23, G32, G35,
 G34, SN, SP, EN, 3V3, CLK, SD0, SD1, G15, G2, G0, G4, G16, G17, G5, G18,
 G19, G21, RXD, TXD, G22
-2. OLED Display
+
+3. OLED Display
+   
 ○ Description: A small display module used to show text and graphics.
 ○ Pins: GND, VCC, SCL, SDA
-3. Pushbuttons (5 units)
+
+5. Pushbuttons (5 units)
+   
 ○ Description: Momentary switches used for user input.
+
 ○ Pins: Pin 1, Pin 2, Pin 3, Pin 4
-4. Potentiometer
+
+7. Potentiometer
+   
 ○ Description: A variable resistor used to adjust the speed of Morse code
 transmission.
+
 ○ Pins: GND, Output, VCC
-5. Buzzer
+
+9. Buzzer
+    
 ○ Description: An audio output device used to emit sound for Morse code signals.
 ○ Pins: +, -
-6. LED (Two Pin, Green)
+
+11. LED (Two Pin, Green)
+    
 ○ Description: A light-emitting diode used for visual signaling of Morse code.
 ○ Pins: Cathode, Anode
-7. Comment V2
+
+13. Comment V2
+    
 ○ Description: A placeholder for comments or notes in the circuit design.
 ○ Pins: None
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Wiring Details
 ESP32 (38-pin Type-C CP2102)
+
 ● CMD: Connected to OLED GND, Pushbutton Pin 1 (all), Potentiometer GND, Buzzer -,
 LED Cathode
 ● 5V: Connected to Potentiometer VCC
@@ -67,9 +93,15 @@ Buzzer
 LED (Two Pin, Green)
 ● Cathode: Connected to ESP32 CMD
 ● Anode: Connected to ESP32 G23
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
 Code Documentation
+
+
 The code for this circuit is written in C++ and is designed to run on the ESP32 microcontroller. It
 includes the following key features:
+
 ● OLED Display Initialization: The OLED display is initialized using the Adafruit_SSD1306
 library, and it is used to display various UI elements and messages.
 ● Button Handling: The code includes functions to read the state of the pushbuttons and
